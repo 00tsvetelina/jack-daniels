@@ -3,7 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  border: none; }
+  border: none;
+  font-size: 1.07em; }
+
+body {
+  background-color: #000000; }
 
 html {
   scroll-behavior: smooth; }
@@ -24,7 +28,7 @@ html {
   .above-the-fold p {
     margin: 0 20%;
     text-align: center;
-    font-size: 2.2em;
+    font-size: 2em;
     font-weight: 600;
     text-transform: uppercase; }
 
@@ -84,6 +88,48 @@ html {
         font-weight: 700;
         color: #D2BC86; }
 
+.promo {
+  background-color: #000000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  padding: 0 5%;
+  margin: 0 0 10% 0; }
+  .promo .box-left, .promo .box-right {
+    color: #ffffff;
+    width: 50%;
+    padding: 10% 0;
+    margin: 0 0.5%;
+    border: 0.1em solid;
+    border-color: #9E8957;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+    .promo .box-left img, .promo .box-right img {
+      width: 20%;
+      margin-bottom: 20%; }
+    .promo .box-left h2, .promo .box-right h2 {
+      font-family: 'Alegreya SC', serif;
+      text-transform: uppercase;
+      font-size: 2.5em; }
+    .promo .box-left p, .promo .box-right p {
+      margin-bottom: 4%;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.3em;
+      text-transform: uppercase;
+      font-weight: 500; }
+    .promo .box-left button, .promo .box-right button {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.3em;
+      border: 0.1em solid;
+      border-color: #9E8957;
+      padding: 1% 12%; }
+
 .footer {
   position: fixed;
   left: 0;
@@ -98,8 +144,8 @@ html {
   align-items: center;
   color: #ffffff; }
   .footer .logo-footer {
-    width: 8%; }
+    width: 6%; }
   .footer .slogan {
-    font-size: 1em;
+    font-size: 1.3em;
     font-family: 'Oswald', sans-serif;
     font-weight: 500; }
