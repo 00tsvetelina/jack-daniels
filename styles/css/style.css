@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none; }
+
+html {
+  scroll-behavior: smooth; }
+
+.above-the-fold {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  background: url("../../assets/banner.png") no-repeat;
+  box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif; }
+  .above-the-fold p {
+    margin: 0 20%;
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: 600;
+    text-transform: uppercase; }
+
+.bonded {
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  padding: 5% 10%;
+  align-items: center;
+  justify-content: center; }
+  .bonded .text {
+    padding: 10% 10% 10% 25%; }
+    .bonded .text h2 {
+      font-family: 'Alegreya SC', serif;
+      text-transform: uppercase;
+      font-size: 4em;
+      margin: 5% 0; }
+    .bonded .text p, .bonded .text .ingredients {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.3em;
+      font-weight: 500; }
+    .bonded .text .ingredients {
+      margin: 10% 0;
+      display: flex;
+      justify-content: space-between; }
+      .bonded .text .ingredients .percent {
+        font-weight: 700;
+        color: #D2BC86; }
+
+.triple-mash {
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  padding: 5% 10%;
+  align-items: center;
+  justify-content: center; }
+  .triple-mash .text {
+    padding: 10% 25% 10% 10%; }
+    .triple-mash .text hr {
+      background-color: #D2BC86;
+      height: 0.05em;
+      margin: 5% 0; }
+    .triple-mash .text h2 {
+      font-family: 'Alegreya SC', serif;
+      text-transform: uppercase;
+      font-size: 4em;
+      margin: 5% 0; }
+    .triple-mash .text p, .triple-mash .text .ingredients {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.3em;
+      font-weight: 500; }
+    .triple-mash .text .ingredients {
+      margin: 10% 0;
+      display: flex;
+      flex-direction: column; }
+      .triple-mash .text .ingredients .percent {
+        font-weight: 700;
+        color: #D2BC86; }
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #514425;
+  height: 5%;
+  padding: 2% 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff; }
+  .footer .logo-footer {
+    width: 8%; }
+  .footer .slogan {
+    font-size: 1em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500; }

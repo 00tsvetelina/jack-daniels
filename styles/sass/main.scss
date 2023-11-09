@@ -1,0 +1,155 @@
+// main colors 
+$bg-color: #000000;
+$text: #ffffff;
+$accent-light: #D2BC86;
+$accent-dark: #9E8957;
+$accent-darker: #514425;
+
+// set body & html 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+// above the fold  
+.above-the-fold {
+    min-height: 100vh;
+    display: flex;
+    align-items:center;
+    background-color: $bg-color;
+    background: url('../../assets/banner.png') no-repeat;
+    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $text;
+    font-family: 'Oswald', sans-serif;
+
+    p {
+        margin: 0 20%;
+        text-align: center;
+        font-size: 2.2em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+}
+
+// below the fold
+
+.bonded {
+    background-color: $bg-color;
+    color: $text;
+    display: flex;
+    padding: 5% 10%;
+    align-items: center;
+    justify-content: center;
+
+    .text{
+        padding: 10% 10% 10% 25%;
+
+        h2 {
+            font-family: 'Alegreya SC', serif;
+            text-transform: uppercase;
+            font-size: 4em;
+            margin: 5% 0;
+        }
+
+        p, .ingredients{
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+
+        .ingredients {
+            margin: 10% 0;
+            display: flex;
+            justify-content: space-between;
+            
+            .percent {
+                font-weight: 700;
+                color: $accent-light;
+            }
+        }
+    }
+}
+
+
+.triple-mash {
+    background-color: $bg-color;
+    color: $text;
+    display: flex;
+    padding: 5% 10%;
+    align-items: center;
+    justify-content: center;
+
+    .text{
+        padding: 10% 25% 10% 10%;
+
+        hr {
+            background-color: $accent-light;
+            height: 0.05em;
+            margin: 5% 0;
+        }
+
+        h2 {
+            font-family: 'Alegreya SC', serif;
+            text-transform: uppercase;
+            font-size: 4em;
+            margin: 5% 0;
+        }
+
+        p, .ingredients{
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+
+        .ingredients {
+            margin: 10% 0;
+            display: flex;
+            flex-direction: column;
+            
+            .percent {
+                font-weight: 700;
+                color: $accent-light;
+            }
+
+        }
+    }
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: $accent-darker;
+    height: 5%;
+    padding: 2% 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: $text;
+
+    .logo-footer {
+        width: 8%;
+    }
+
+    .slogan {
+        font-size: 1em;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 500;
+    }
+
+}
