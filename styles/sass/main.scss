@@ -1,3 +1,4 @@
+
 // main colors 
 $bg-color: #000000;
 $text: #ffffff;
@@ -9,6 +10,8 @@ $accent-darker: #514425;
 *{
     margin: 0;
     padding: 0;
+    left: 0;
+    right: 0;
     box-sizing: border-box;
     outline: none;
     border: none;
@@ -16,9 +19,11 @@ $accent-darker: #514425;
 
 }
 
-
 body {
     background-color: $bg-color;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 html{
@@ -47,6 +52,8 @@ html{
         font-weight: 600;
         text-transform: uppercase;
     }
+
+   
 
 }
 
@@ -229,6 +236,9 @@ html{
 }
 
 .circle-section {
+    margin: 0 3%;
+    align-items: center;
+
     h2 {
         color: $text;
         display: flex;
@@ -237,21 +247,19 @@ html{
         text-transform: uppercase;
         font-size: 2em;
         text-align: center;
-        padding: 0 31%;
+        padding: 0 29%;
     }
+
     .slider {
+        flex-wrap: wrap;
         color: $accent-light;
         display: flex;
         justify-content: space-between;
         text-align: center;
         margin: 5%;
 
-        // new
-
-        
-
-        .circle{
-           
+      
+     .circle{
             display: flex;
             align-items: center;
             border: 1px solid;
@@ -282,6 +290,55 @@ html{
     }
 }
 
+.swiffy-slider{
+        margin: 5% 15%;
+        overflow: hidden;
+        width: auto;
+        align-items: center;
+
+        .slider-container {
+            justify-items: center;
+            scroll-behavior: auto;
+        }
+    
+    li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid;
+            border-radius: 50%;
+            width: 25em;
+            height: 25em;
+            padding: 3%;
+            font-family: 'Alegreya SC', serif;
+            margin: 0;
+            font-size: 0.9em;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-align: center;
+            color: $text;
+            border: 0.2em solid;
+            border-color: $accent-darker;
+            outline: 0.5em solid $accent-light;
+            outline-offset: -30px;
+
+            p {
+                padding: 10%;
+            }
+        }
+
+
+            .slider-nav {
+          
+           }
+        
+            .slider-nav .slider-nav-next {
+           
+           }
+        
+        
+    }
+
 .footer {
     position: fixed;
     left: 0;
@@ -302,10 +359,16 @@ html{
     }
 
     .slogan {
-        font-size: 1.3em;
+        font-size: 1em;
         font-family: 'Oswald', sans-serif;
         font-weight: 500;
     }
 
 }
 
+@media screen and (max-width: 1500px) {
+    .circle { 
+        margin: 5%;
+        
+    }
+  }
