@@ -1,30 +1,27 @@
-window.onload = function () {
+const imageZoomElements = document.querySelectorAll('.image-zoom');
+const zoomElements = document.querySelectorAll('.zoom');
 
-    const zoom = document.querySelector('.image-zoom');
-    const zoomImg = document.querySelector('.zoom');
+for(i=0; i<imageZoomElements.length; i++) {
+    const imageZoom = imageZoomElements[i];
+    const zoom = zoomElements[i];
 
-    zoom.addEventListener('mousemove', (e)=>{
-       
-        zoomImg.style.opacity = 1;
-        let positionPx = e.x - zoom.getBoundingClientRect().left;
-        let positionX = (positionPx / zoom.offsetWidth) * 100;
+    imageZoom.addEventListener('mousemove', (event) => zoomIn(event, imageZoom, zoom))  
+    imageZoom.addEventListener('mouseout', ()=> { zoom.style.opacity = 0; })
+}
 
-        let positionPy = e.y - zoom.getBoundingClientRect().top;
-        let positionY = (positionPy / zoom.offsetHeight) * 100;
+function zoomIn(event, imageZoom, zoom) {
+    zoom.style.opacity = 1;
+    let positionPx = event.x - imageZoom.getBoundingClientRect().left;
+    let positionX = (positionPx / imageZoom.offsetWidth) * 100;
 
-        zoomImg.style.setProperty('$zoom-x', positionX + '%');
-        zoomImg.style.setProperty('$zoom-y', positionY + '%');
+    let positionPy = event.y - imageZoom.getBoundingClientRect().top;
+    let positionY = (positionPy / imageZoom.offsetHeight) * 100;
 
-        let transformX = -(positionX - 50) / 2.5;
-        let transformY = -(positionY - 50) / 2.5;
-        console.log("transformX", transformX)
-        console.log("transformY", transformY)
+    zoom.style.setProperty('--zoom-x', positionX + '%');
+    zoom.style.setProperty('--zoom-y', positionY + '%');
 
-        zoomImg.style.transform = `scale(2) translateX(${transformX}%) translateY(${transformY}%)`;
+    let transformX = -(positionX - 50) / 2.5;
+    let transformY = -(positionY - 50) / 2.5;
 
-    })  
-
-    zoom.addEventListener('mouseout', ()=>{
-        zoomImg.style.opacity = 0;
-    })
+    zoom.style.transform = `scale(2) translateX(${transformX}%) translateY(${transformY}%)`;
 }
