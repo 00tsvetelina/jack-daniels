@@ -238,6 +238,9 @@ html{
 .circle-section {
     margin: 0 3%;
     align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
     h2 {
         color: $text;
@@ -245,7 +248,7 @@ html{
         justify-content: center;
         font-family: 'Alegreya SC', serif;
         text-transform: uppercase;
-        font-size: 2em;
+        font-size: 1.3em;
         text-align: center;
         padding: 0 29%;
     }
@@ -257,7 +260,8 @@ html{
         justify-content: space-between;
         text-align: center;
         margin: 5%;
-
+        gap: 2.5em;
+        justify-content: space-evenly;
       
      .circle{
             display: flex;
@@ -266,9 +270,9 @@ html{
             border-radius: 50%;
             width: 14em;
             height: 14em;
-            padding: 2.5%;
+            padding: 3%;
             font-family: 'Alegreya SC', serif;;
-            font-size: 1em;
+            font-size: 0.8em;
             font-weight: 800;
             text-transform: uppercase;
             cursor: pointer;
@@ -283,20 +287,25 @@ html{
             color: $text;
             border: 0.2em solid;
             border-color: $accent-darker;
-            outline: 0.4px solid $accent-light;
+            outline: 0.5px solid $accent-light;
             outline-offset: -20px;
 
         }
     }
 }
 
-.swiffy-slider{
-        margin: 5% 15%;
+.mobile-carousel { 
+    display: none;
+}
+
+.swiffy-slider {
         overflow: hidden;
         width: auto;
         align-items: center;
-
+        justify-content: center;
+        margin: 0;
         .slider-container {
+            margin: 5% 15%;
             justify-items: center;
             scroll-behavior: auto;
         }
@@ -307,12 +316,12 @@ html{
             align-items: center;
             border: 1px solid;
             border-radius: 50%;
-            width: 25em;
-            height: 25em;
-            padding: 3%;
+            width: 17em;
+            height: 17em;
+            padding: 7%;
             font-family: 'Alegreya SC', serif;
             margin: 0;
-            font-size: 0.9em;
+            font-size: 0.7em;
             font-weight: 800;
             text-transform: uppercase;
             text-align: center;
@@ -326,16 +335,6 @@ html{
                 padding: 10%;
             }
         }
-
-
-            .slider-nav {
-          
-           }
-        
-            .slider-nav .slider-nav-next {
-           
-           }
-        
         
     }
 
@@ -359,7 +358,7 @@ html{
     }
 
     .slogan {
-        font-size: 1em;
+        font-size: 0.8em;
         font-family: 'Oswald', sans-serif;
         font-weight: 500;
     }
@@ -372,3 +371,16 @@ html{
         
     }
   }
+
+
+  @media screen and (max-width: 750px) {
+    .mobile-carousel { 
+        display: block;
+    }
+
+    .circle-section {
+        display: none;
+    }
+  }
+
+
