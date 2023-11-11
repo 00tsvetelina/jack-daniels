@@ -36,9 +36,20 @@ html {
   background-color: #000000;
   color: #ffffff;
   display: flex;
-  padding: 5% 10%;
+  padding: 5%;
   align-items: center;
   justify-content: center; }
+  .bonded .image-zoom {
+    width: max-content;
+    position: relative; }
+    .bonded .image-zoom .zoom {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: scale(1.5);
+      pointer-events: none;
+      clip-path: circle(20% at 50% 50%);
+      opacity: 0; }
   .bonded .text {
     padding: 10% 10% 10% 25%; }
     .bonded .text h2 {
@@ -62,9 +73,20 @@ html {
   background-color: #000000;
   color: #ffffff;
   display: flex;
-  padding: 5% 10%;
+  padding: 0 5%;
   align-items: center;
   justify-content: center; }
+  .triple-mash .image-zoom {
+    width: max-content;
+    position: relative; }
+    .triple-mash .image-zoom .zoom {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: scale(1.5);
+      pointer-events: none;
+      clip-path: circle(20% at 50% 50%);
+      opacity: 0; }
   .triple-mash .text {
     padding: 10% 25% 10% 10%; }
     .triple-mash .text hr {
@@ -129,6 +151,46 @@ html {
       border: 0.1em solid;
       border-color: #9E8957;
       padding: 1% 12%; }
+
+.circle-section h2 {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  font-family: 'Alegreya SC', serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  text-align: center;
+  padding: 0 31%; }
+
+.circle-section .slider {
+  color: #D2BC86;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 5%; }
+  .circle-section .slider .circle {
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 14em;
+    height: 14em;
+    padding: 2.5%;
+    font-family: 'Alegreya SC', serif;
+    font-size: 1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    filter: blur(5px);
+    transition: 0.5s all; }
+  .circle-section .slider .circle:hover {
+    filter: blur(0);
+    transform: scale(1.4);
+    color: #ffffff;
+    border: 0.2em solid;
+    border-color: #514425;
+    outline: 0.4px solid #D2BC86;
+    outline-offset: -20px; }
 
 .footer {
   position: fixed;

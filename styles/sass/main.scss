@@ -56,9 +56,30 @@ html{
     background-color: $bg-color;
     color: $text;
     display: flex;
-    padding: 5% 10%;
+    padding: 5%;
     align-items: center;
     justify-content: center;
+
+    .image-zoom{
+        width: max-content;
+        position: relative;
+        
+
+        .zoom{
+            position: absolute;
+            left: 0;
+            top: 0;
+            $zoom-x: 50%;
+            $zoom-y: 50%;
+            transform: scale(1.5);
+            pointer-events: none;
+            clip-path: circle(20% at $zoom-x $zoom-y);
+            // clip-path: circle(20%);
+
+            opacity: 0;
+        }
+    }
+    
 
     .text{
         padding: 10% 10% 10% 25%;
@@ -94,9 +115,29 @@ html{
     background-color: $bg-color;
     color: $text;
     display: flex;
-    padding: 5% 10%;
+    padding: 0 5%;
     align-items: center;
     justify-content: center;
+
+    .image-zoom{
+        width: max-content;
+        position: relative;
+        
+
+        .zoom{
+            position: absolute;
+            left: 0;
+            top: 0;
+            $zoom-x: 50%;
+            $zoom-y: 50%;
+            transform: scale(1.5);
+            pointer-events: none;
+            clip-path: circle(20% at $zoom-x $zoom-y);
+
+            opacity: 0;
+        }
+    }
+    
 
     .text{
         padding: 10% 25% 10% 10%;
@@ -134,7 +175,7 @@ html{
     }
 }
 
-.promo {
+.promo { 
     background-color: $bg-color;
     display: flex;
     justify-content: space-evenly;
@@ -187,6 +228,60 @@ html{
     }
 }
 
+.circle-section {
+    h2 {
+        color: $text;
+        display: flex;
+        justify-content: center;
+        font-family: 'Alegreya SC', serif;
+        text-transform: uppercase;
+        font-size: 2em;
+        text-align: center;
+        padding: 0 31%;
+    }
+    .slider {
+        color: $accent-light;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        margin: 5%;
+
+        // new
+
+        
+
+        .circle{
+           
+            display: flex;
+            align-items: center;
+            border: 1px solid;
+            border-radius: 50%;
+            width: 14em;
+            height: 14em;
+            padding: 2.5%;
+            font-family: 'Alegreya SC', serif;;
+            font-size: 1em;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            filter: blur(5px);
+            transition: 0.5s all;
+    
+        }
+
+        .circle:hover{
+            filter: blur(0);
+            transform: scale(1.4);
+            color: $text;
+            border: 0.2em solid;
+            border-color: $accent-darker;
+            outline: 0.4px solid $accent-light;
+            outline-offset: -20px;
+
+        }
+    }
+}
+
 .footer {
     position: fixed;
     left: 0;
@@ -213,3 +308,4 @@ html{
     }
 
 }
+

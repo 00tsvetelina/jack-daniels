@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Lato:wght@300;400;700;900&family=Montserrat:wght@200&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <script src="zoom.js"></script>
     <title>Intern Project</title>
 </head>
 <body>
@@ -21,7 +22,10 @@
 
 
     <div class="bonded">
-        <img src="./assets/bonded.png" alt="Bonded Whiskey">
+        <div class="image-zoom">
+            <img src="./assets/bonded.png" alt="Bonded Whiskey" class="no-zoom">
+            <img src="./assets/bonded.png" alt="Bonded Whiskey" class="zoom">
+        </div>
         <div class="text">
             <h2>Bonded</h2>
             <p>Jack Daniel’s Bonded е 50-градусово Тенеси уиски с нотки карамел, дъб, подправки и продължителен завършек. Отлежаването в селектирани бъчви спомага за кехлибарения му цвят и силно изразения му характер.</p>
@@ -57,11 +61,35 @@
                 </div>
             </div>
         </div>
-        <img src="./assets/Triple-Mash.png" alt="Triple Mash Whiskey">
+        <div class="image-zoom">
+            <img src="./assets/Triple-Mash.png" alt="Triple Mash Whiskey" class="no-zoom">
+            <img src="./assets/Triple-Mash.png" alt="Triple Mash Whiskey" class="zoom">
+        </div>
     </div>
 
-    <div class="slider"></div>
+    <div class="circle-section">
+        <h2>Американски държавен стандарт от 1897 г. удостоверява, че уискито е:</h2>
 
+    <div class="slider">
+       
+            <div class="circle">
+                <p>отлежало минимум 4 години ВЪВ ФЕДЕРАЛНИ СКЛАДОВЕ</p>
+            </div>
+            <div class="circle">
+                <p>произведено в една дестилерия</p>
+            </div>
+            <div class="circle">
+                <p>произведено през един дестилационен сезон</p>
+            </div>
+            <div class="circle">
+                <p>бутилирано при 50 алкохолни градуса</p>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    </div>
     <div class="promo">
         <div class="box-left">
             <img src="./assets/bonded.png" alt="Bonded Whiskey" class="bottle">
@@ -81,5 +109,8 @@
         <img src="/assets/Logo.png" alt="Logo" class="logo-footer">
         <p class="slogan">ВАШИТЕ ПРИЯТЕЛИ ОТ JACK DANIEL'S ВИ НАПОМНЯТ ДА КОНСУМИРАТЕ ОТГОВОРНО.</p>
     </div>
+
 </body>
 </html>
+
+
