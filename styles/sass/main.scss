@@ -468,12 +468,14 @@ html{
     }
 
     .footer {
-        justify-content: space-evenly;
+        
         padding: 3em;
-        p {
-            display: none;
-        }
 
+       
+        p{
+        font-size: 0.3em;
+        margin-left: 10%;
+        }
         .logo-footer {
             width: 7em;
 

@@ -324,9 +324,9 @@ html {
       .promo .box-left button, .promo .box-right button {
         font-size: 1.2em; }
   .footer {
-    justify-content: space-evenly;
     padding: 3em; }
     .footer p {
-      display: none; }
+      font-size: 0.3em;
+      margin-left: 10%; }
     .footer .logo-footer {
       width: 7em; } }
