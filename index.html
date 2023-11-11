@@ -17,7 +17,26 @@
     <title>Intern Project</title>
 </head>
 <body>
+    <div class="popup-bonded">
+        
+        <video width="800" height="500" autoplay loop muted>
+            <source src="video/Bonded.mp4" type="video/mp4">
+          </video>      
+          <div class="close" onclick="toggle1()">
+            <p>X</p>
+        </div> 
+    </div>
 
+    <div class="popup-triple-mash">
+        <video width="800" height="500" autoplay loop muted>
+            <source src="video/TripleMash.mp4" type="video/mp4" autoplay>
+          </video>
+          <div class="close" onclick="toggle2()">
+            <p>X</p>
+        </div> 
+    </div>
+
+<section id="blur">
     <div class="above-the-fold">
         <img src="assets/Logo.png" alt="Logo" class="logo">
         <p>Две нови премиум уискита, произведени по американски държавен стандарт и отлежали четири години в селектирани бъчви.</p>
@@ -25,9 +44,14 @@
 
 
     <div class="bonded">
-        <div class="image-zoom">
-            <img src="./assets/bonded.png" alt="Bonded Whiskey" class="no-zoom">
-            <img src="./assets/bonded.png" alt="Bonded Whiskey" class="zoom">
+        <div class="product-bonded">
+            <div class="image-zoom">
+                <img src="./assets/bonded.png" alt="Bonded Whiskey" class="no-zoom">
+                <img src="./assets/bonded.png" alt="Bonded Whiskey" class="zoom">
+            </div>
+            <div id="icon" onclick="toggle1()">
+                <img src="assets/add.png" class="icon">
+            </div>
         </div>
         <div class="text">
             <h2>Bonded</h2>
@@ -64,10 +88,17 @@
                 </div>
             </div>
         </div>
+
+        <div class="product-triple-mash">
+            <div id="icon" onclick="toggle2()">
+                <img src="assets/add.png" class="icon">
+            </div>
         <div class="image-zoom">
             <img src="./assets/Triple-Mash.png" alt="Triple Mash Whiskey" class="no-zoom">
             <img src="./assets/Triple-Mash.png" alt="Triple Mash Whiskey" class="zoom">
         </div>
+        
+    </div>
     </div>
 
     <div class="circle-section">
@@ -141,7 +172,8 @@
         <img src="/assets/Logo.png" alt="Logo" class="logo-footer">
         <p class="slogan">ВАШИТЕ ПРИЯТЕЛИ ОТ JACK DANIEL'S ВИ НАПОМНЯТ ДА КОНСУМИРАТЕ ОТГОВОРНО.</p>
     </div>
-
+</section>
 </body>
 <script src="zoom.js"></script>
+<script src="pop-up.js"></script>
 </html>
