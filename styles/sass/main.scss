@@ -16,7 +16,6 @@ $accent-darker: #514425;
     outline: none;
     border: none;
     font-size: 1.07em;
-
 }
 
 body {
@@ -32,6 +31,7 @@ html{
 
 // above the fold  
 .above-the-fold {
+    min-width: fit-content;
     min-height: 100vh;
     display: flex;
     align-items:center;
@@ -44,6 +44,7 @@ html{
     flex-direction: column;
     color: $text;
     font-family: 'Oswald', sans-serif;
+    
 
     p {
         margin: 0 20%;
@@ -265,7 +266,7 @@ html{
         justify-content: space-between;
         text-align: center;
         margin: 5%;
-        gap: 2.5em;
+        gap: 5em;
         justify-content: space-evenly;
       
      .circle{
@@ -273,11 +274,11 @@ html{
             align-items: center;
             border: 1px solid;
             border-radius: 50%;
-            width: 14em;
-            height: 14em;
+            width: 15em;
+            height: 15em;
             padding: 3%;
             font-family: 'Alegreya SC', serif;;
-            font-size: 0.8em;
+            font-size: 0.7em;
             font-weight: 800;
             text-transform: uppercase;
             cursor: pointer;
@@ -292,7 +293,7 @@ html{
             color: $text;
             border: 0.2em solid;
             border-color: $accent-darker;
-            outline: 0.5px solid $accent-light;
+            outline: 0.5em solid $accent-light;
             outline-offset: -20px;
 
         }
@@ -304,7 +305,7 @@ html{
 }
 
 .swiffy-slider {
-        overflow: hidden;
+        position: fixed;
         width: auto;
         align-items: center;
         justify-content: center;
@@ -313,6 +314,8 @@ html{
             margin: 5% 15%;
             justify-items: center;
             scroll-behavior: auto;
+            overflow-x: hidden;
+            grid-column-end: unset;
         }
     
     li {
@@ -373,12 +376,15 @@ html{
 @media screen and (max-width: 1500px) {
     .circle { 
         margin: 5%;
-        
+    }
+
+    .circle-section .slider {
+        gap: 0;
     }
   }
 
 
-  @media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
     .mobile-carousel { 
         display: block;
     }
@@ -386,6 +392,93 @@ html{
     .circle-section {
         display: none;
     }
+
   }
 
+  @media screen and (max-width: 1400px) {
+    * {
+        position: relative;
+    }
+
+    .above-the-fold {
+        background-attachment: fixed;;
+
+        p{
+         font-size: 1.4em; 
+         margin-top: 5%;  
+        }
+
+       .logo {
+        width: 20em;
+       }
+    }
+
+    .bonded {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+
+        .ingredients{
+            flex-direction: column;
+            
+        }
+
+        .text {
+            padding: 0 5%;
+        }
+
+    }
+
+    .triple-mash {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10%;
+        
+        .text {
+            padding: 0 5%;
+        }
+    }
+
+    .promo {
+        flex-direction: column;
+        align-items: center;
+
+        .box-left, .box-right {
+            margin: 5% 0;
+            width: 70%;
+
+            img {
+                width: 40%;
+                margin-bottom: 5%;
+            }
+
+            p {
+                font-size: 1em;
+                padding: 0 10%;
+            }
+
+            button {
+                font-size: 1.2em;
+            }
+        }
+
+        
+    }
+
+    .footer {
+        justify-content: space-evenly;
+        padding: 3em;
+        p {
+            display: none;
+        }
+
+        .logo-footer {
+            width: 7em;
+
+        }
+    }
+
+  }
 
